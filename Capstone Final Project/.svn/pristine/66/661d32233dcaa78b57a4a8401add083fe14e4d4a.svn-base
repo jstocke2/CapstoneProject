@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Microsoft.Data.Entity;
+using Microsoft.Data.Entity.Metadata;
+
+namespace RESTv0.Models
+{
+    public class RegistrationDbContext : DbContext
+    {
+        public DbSet<Course> Courses { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(Startup.Configuration["Data:DefaultConnection:ConnectionString"]);
+        }
+    }
+}

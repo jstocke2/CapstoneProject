@@ -1,0 +1,16 @@
+﻿{
+    "Data": {
+        "DefaultConnection": {
+            "ConnectionString": "Server=tcp:edain.midearth.cs.kent.edu, 31232;Database=WorkFlow;Trusted_Connection=False;User Id=sa;Password=applesauce;MultipleActiveResultSets=True"
+        }
+    }
+}
+
+//<connectionStrings>
+//  <add
+//       name="WorkFlowConnectionString" providerName="System.Data.SqlClient"
+//       connectionString="Data Source=tcp:edain.midearth.cs.kent.edu, 31232;
+//       Initial Catalog=WorkFlow; Integrated Security=False; User Id=sa; 
+//       Password=applesauce; MultipleActiveResultSets=True"
+//  />
+//</connectionStrings>

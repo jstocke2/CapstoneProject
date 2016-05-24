@@ -1,0 +1,194 @@
+MODEL DOCUMENTATION
+---------------------------------------
+
+----------
+AccountBindingModel.cs
+-----
+Class: CreateUserBindingModel
+Stored in memory
+Used to create a new user which is later stored in the database
+
+Required Attributes
+Email: String, the user's email address
+Username: String, the user's username
+FirstName: String, the user's first name
+LastName: String, the user's last name
+Password: String, The user's password
+ConfirmPassword: String, Should be the same as the Password otherwise the user creation will fail.
+
+Other Attributes
+RoleName: String, the user's role in the application. Not currently used by the api.
+-----
+Class: LoginUserBindingModel
+Stored in memory
+Used to log a user into the service
+
+Required Attributes
+Username: String, the username that is attempting to connect to the service
+
+Other Attributes
+Password: String, the password that will be used to attempt to login to the service. Not required although login will mostlikely not work if null.
+Token: String, the token that the user logining in will use for the remainder of this session. Is generated in the /api/user/login endpoint.
+-----
+---------
+ApplicationUser.cs
+-----
+Class: ApplicationUser
+Stored in Memory
+The user with private data redacted. Returned by 'get' methods that return users.
+Not for use by front end.
+
+Required Attributes
+FirstName: String, The first name of the user
+LastName: String, The last name of the user
+Level: Byte, the access level of the user
+JoinDate: the date that the user account was created
+-----
+----------
+Audience.cs
+-----
+Class: Audience
+Stored in server
+Model to represent front ends attempting to access the service.
+
+Required Attributes
+ClientId: String, unique Id used to differentiate clients
+Base64Secret: String, Secret used to generate unique id
+Name: String, name of the accessing service used to generate Id.
+-----
+----------
+AudienceModel.cs
+-----
+Class: AudienceModel
+Stored in memory
+Abstraction of audience. Used by the front end to sent the application name to the api
+
+Required Attributes
+Name: String, name of the accessing front end.
+-----
+---------
+Document.cs
+-----
+Class: Document
+Stored in server
+A single document that is used to access sections
+
+Required Attributes:
+Id: Int, Unique id of the document
+RevisionNumber: Int, What revision of the document is the current one.
+
+Other Attributes:
+Section: ICollection<Section>, All sections that are contained in the document
+-----
+----------
+Font.cs
+-----
+Class: Font
+Stored in server
+The type of font that a section or subsection will display
+
+Required Attributes:
+Id: Int, Unqiue id of the font
+Style: String, the style of the font (EX: "Times New Roman","Ariel","Sans-Serif")
+Size: Int, The size of the characters. The actual interpritation of the value is to be decided by the front end.
+Color: String, the color of the characters (EX: "Blue","Red","Purple")
+-----
+----------
+Revision.cs
+-----
+Class: Revision
+Stored in server
+A previous revision of a document
+
+Required Attributes:
+RevisionNumber: Int, The unique number associated with that perticular revision. Should be with previous revisions being smaller size than more current ones.
+
+Other Attributes
+Document: Document, The document that the revision is a previous version of
+-----
+----------
+SectionRevision.cs
+-----
+Class: SectionRevision
+Stored in server
+A previous version of a section
+
+Required Attributes
+Id: int, unique id of the section
+PreviousContent:String, The content stored in this version
+PreviousOrder:int, the prevous relative order of the sections
+
+Other Attributes
+TimeStamp: DateTime, The time the section revision was created
+Section: Section, The section this is a revision of
+Revision:ICollection<Revision>, Any revisions that this applys to. Should include all revisions from when it was first set to when it was changed.
+Template: Template, The template that was applied to this section version
+-----
+----------
+SubsectionRevision.cs
+-----
+Class: SubsectionRevision
+Stored in server
+A previous version of a subsection
+
+Required Attributes:
+Id: int, Unique id of the subsection revision
+PreviousContent:String, The content stored in this version
+PreviousOrder:int, the prevous relative order of the subsections
+
+Other Attributes
+TimeStamp: DateTime, The time the subsection revision was created
+Subsection: Subsection, The subsection this is a revision of
+Revision:ICollection<Revision>, Any revisions that this applys to. Should include all revisions from when it was first set to when it was changed.
+Template: Template, The template that was applied to this subsection version
+-----
+----------
+Section.cs
+-----
+Class: Section
+Stored in server
+A section of a document
+
+Required Attributes:
+Id: int, Unique id of the section
+Order: int, The relative order of the sections. The lower the order is, the sooner in appears in the document. No two orders for the same document should be the same
+
+Other Attributes:
+Text: String, The content of the section. Can be stored in whatever text format the frontend would like
+Document: Document, the document this is a section of
+SubSection: ICollection<Subsection>, A collection of subsections under this perticular section
+Template: Template, the template that is applied the Text attribute in this section
+-----
+----------
+Subsection.cs
+-----
+Class: Subsection
+Stored in server
+A subsection under a section
+
+Required Attributes:
+Id: int, Unique id of the subsection
+Order: int, The relative order of the subsections. The lower the order is, the sooner in appears in the section. No two orders for the same section should be the same
+Text: String, The content of the subsection. Can be stored in whatever text format the frontend would like
+
+Other Attributes:
+Section: Section, the section this subsection is a part of
+Template: Template, the template that is applied to the Text attribute in this subsection
+-----
+----------
+Template.cs
+-----
+Class: Template
+Stored in server
+The format that will be applied to any section or subsection
+
+Required Attributes:
+Id: int, the unique Id of a template
+FontId: int, the Id of the primary font that will be applied to content in the template
+IndentSpacing: int, The default indent that will be applied to most lines. The actual application of this value is to be decided by the frontend.
+ParagraphSpacing: int, the space between paragraphs. The actual application of this value is to be decided by the front end
+LineSpacing: int, The space between lines inside of a paragraph. The actual application of this value is to be decided by the front end
+ParagraphIndent: int, How much a new paragraph is indented. The actual applicaiton of this value is to be decided by the front end.
+Font: ICollection<Font>Font, All fonts that may be used inside of the template.
+-----
+----------

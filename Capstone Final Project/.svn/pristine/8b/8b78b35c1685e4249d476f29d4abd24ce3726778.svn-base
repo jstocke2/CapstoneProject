@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A31C4B83-2ACF-4229-9128-0F6606E55D48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16A3B533-5BEA-4D18-B1D7-C47ADB5EB4B6}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RESTv0", "src\Contempt\RESTv0.xproj", "{B93ABEEE-382D-4163-8F6F-AA830419AB45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B93ABEEE-382D-4163-8F6F-AA830419AB45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93ABEEE-382D-4163-8F6F-AA830419AB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93ABEEE-382D-4163-8F6F-AA830419AB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93ABEEE-382D-4163-8F6F-AA830419AB45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B93ABEEE-382D-4163-8F6F-AA830419AB45} = {A31C4B83-2ACF-4229-9128-0F6606E55D48}
+	EndGlobalSection
+EndGlobal

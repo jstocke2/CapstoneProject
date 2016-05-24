@@ -1,0 +1,1 @@
+Click the ERD editor file open the editor file and copy paste the google doc into the open URL.

@@ -1,0 +1,10 @@
+Server type: "database engine"
+
+Server name: "tcp:edain.midearth.cs.kent.edu, 31232"
+
+Authentication: 
+"SQL Server Authentication"
+
+Login: "sa"
+
+Password: "applesauce"

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WorkflowRestfull.WebApiConfig" Collapsed="true">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\WebApiConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkflowRestfull.WebApiApplication" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkflowRestfull.Controllers.DocumentsController" Collapsed="true">
+    <Position X="11" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAwAAAACAAAAAAAAAAAAAAAAAgBAAAAAAA=</HashCode>
+      <FileName>Controllers\DocumentsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="workflowRestfull.Controllers.SectionsController" Collapsed="true">
+    <Position X="11.25" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAACCQAAAAAAAAAACAAAAgAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SectionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="workflowRestfull.Controllers.SubsectionsController" Collapsed="true">
+    <Position X="11.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAQAAAAAAAAAAAAYIAAAAAAAAIAAAAAAIA=</HashCode>
+      <FileName>Controllers\SubsectionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="workflowRestfull.Migrations.Inital" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAI=</HashCode>
+      <FileName>Migrations\201603031847577_Inital.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="workflowRestfull.Migrations.Configuration" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Migrations\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkflowRestfull.Models.Document" Collapsed="true">
+    <Position X="6.25" Y="1" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Models\Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkflowRestfull.Models.Section" Collapsed="true">
+    <Position X="7" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAgCAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\Section.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkflowRestfull.Models.Subsection" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\Subsection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkflowRestfull.Models.WorkflowRestfullContext" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAAAQAA=</HashCode>
+      <FileName>Models\WorkflowRestfullContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

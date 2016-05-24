@@ -1,0 +1,344 @@
+ENDPOINT DOCUMENTATION
+---------------------------------------
+All endpoints require authorization unless stated otherwise
+All endpoints return an HttpResonseMessage with different content 
+Post/get/put/delete
+Create/Read/update/Delete
+-----
+
+Account related endpoints
+In AccountsController class
+
+End point:{base url}/api/accounts/users
+Get method
+Method Called: GetUsers
+Model returned: UserReturnModel 
+Returns a list of all users
+
+End point:{base url}/api/accounts/user/{specific id}
+Get method
+Method Called: GetUser
+Model returned: UserReturnModel
+returns user with the specific id
+
+End point:{base url}/api/accounts/user/{specific username}
+Get method
+Method Called: GetUserByName
+Model returned: UserReturnModel
+Returns user with the specific username
+
+End point:{base url}/api/accounts/create
+Post method
+Method Called: CreateUser
+Model sent: CreateUserBindingModel
+Model returned: UserReturnModel
+Creates a new user to be stored in the server with the information
+from the CreateUserBindingModel.
+
+End point:{base url}/api/User/login
+Post method
+Method Called: LoginUser
+Model sent: LoginUserBindingModel
+Logs the user in.
+Does not require authorization
+
+-----
+
+Audience Related Endpoints
+In AudienceController class
+
+End point:{base url}/api/audience 
+Post method
+Method Called: Post
+Model Sent: AudienceModel
+Model Returned: AudienceModel
+Creates a new audience based on the audience sent.
+Used to get another secret and clientId which will be used to create a token.
+
+-----
+
+Document Related Endpoints
+In DocumentsController class
+
+End point:{base url}/api/documents
+Get method
+Method Called: GetDocuments
+Model Returned:Document
+Returns an IQueryable of all documents stored in the server
+
+End point:{base url}/api/documents/{Specific Id}
+Get method
+Method Called: GetDocument
+Model Returned: Document
+Returns document with specific id
+
+End point:{base url}/api/documents/{Specific Id}
+Put method
+Method Called: PutDocument
+Model Sent: Document
+Modifies the document at the specific id to be the document sent
+
+End point:{base url}/api/documents
+Post method
+Method Called: PostDocument
+Model Sent: Document
+Model Returned: Document
+Adds sent document to the database
+
+End point:{base url}/api/documents/{Specific Id}
+Delete method
+Method Called: DeleteDocument
+Model Returned: Document
+Deletes document of specific id from the database and returns it
+
+-----
+
+Font related endpoints
+In FontsController class
+
+End point: {base url}/api/fonts
+Get method
+Method called: GetFonts
+Model Returned: Font
+Returns an IQueryable of all fonts in the database
+
+End point: {base url}/api/fonts/{specific id}
+Get method
+Method called: GetFont
+Model Returned: Font
+Returns font with the specified id
+
+End point: {base url}/api/fonts/{specific id}
+Put method
+Method called: PutFont
+Model Sent: Font
+Modifies font with the specific id to reflect the font sent
+
+End point: {base url}/api/fonts
+Post method
+Method Called: PostFont
+Model Sent: Font
+Model returned: Font
+Adds sent font to the database
+
+End point: {base url}/api/fonts/{specific id}
+Delete method
+Method Called: DeleteFont
+Model returned: Font
+Removes font of the id sent from the database and returns it.
+
+-----
+
+Revision Related Endpoints
+In RevisionsController class
+
+End point:{base url}/api/revisions
+Get method
+Method Called: GetRevisions
+Model Returned:Revision
+Returns an IQueryable of all revisions stored in the server
+
+End point:{base url}/api/revisions/{Specific Id}
+Get method
+Method Called: GetRevision
+Model Returned: Revision
+Returns revision with specific id
+
+End point:{base url}/api/revisions/{Specific Id}
+Put method
+Method Called: PutRevision
+Model Sent: Revision
+Modifies the revision at the specific id to be the revision sent
+
+End point:{base url}/api/revisions
+Post method
+Method Called: PostRevision
+Model Sent: Revision
+Model Returned: Revision
+Adds sent revision to the database
+
+End point:{base url}/api/revisions/{Specific Id}
+Delete method
+Method Called: DeleteRevision
+Model Returned: Revision
+Deletes revision of specific id from the database and returns it
+
+-----
+
+SectionRevision Related Endpoints
+In SectionRevisionsController class
+
+End point:{base url}/api/sectionsrevisions
+Get method
+Method Called: GetSectionRevisions
+Model Returned:SectionRevision
+Returns an IQueryable of all section revisions stored in the server
+
+End point:{base url}/api/sectionrevisions/{Specific Id}
+Get method
+Method Called: GetSectionRevision
+Model Returned: SectionRevision
+Returns section revision with specific id
+
+End point:{base url}/api/sectionrevisions/{Specific Id}
+Put method
+Method Called: PutSectionRevision
+Model Sent: SectionRevision
+Modifies the section revision at the specific id to be the section revision sent
+
+End point:{base url}/api/sectionrevisions
+Post method
+Method Called: PostSectionRevision
+Model Sent: SectionRevision
+Model Returned: SectionRevision
+Adds sent section revision to the database
+
+End point:{base url}/api/sectionrevisions/{Specific Id}
+Delete method
+Method Called: DeleteSectionRevision
+Model Returned: SectionRevision
+Deletes section revision of specific id from the database and returns it
+
+-----
+
+SubsectionRevision Related Endpoints
+In SubsectionRevisionsController class
+
+End point:{base url}/api/subsectionsrevisions
+Get method
+Method Called: GetSubsectionRevisions
+Model Returned:SubsectionRevision
+Returns an IQueryable of all subsection revisions stored in the server
+
+End point:{base url}/api/subsectionrevisions/{Specific Id}
+Get method
+Method Called: GetSubsectionRevision
+Model Returned: SubsectionRevision
+Returns subsection revision with specific id
+
+End point:{base url}/api/subsectionrevisions/{Specific Id}
+Put method
+Method Called: PutSubsectionRevision
+Model Sent: SubsectionRevision
+Modifies the subsection revision at the specific id to be the subsection revision sent
+
+End point:{base url}/api/subsectionrevisions
+Post method
+Method Called: PostSubsectionRevision
+Model Sent: SubsectionRevision
+Model Returned: SubsectionRevision
+Adds sent Subsection revision to the database
+
+End point:{base url}/api/subsectionrevisions/{Specific Id}
+Delete method
+Method Called: DeleteSubsectionRevision
+Model Returned: SubsectionRevision
+Deletes subsection revision of specific id from the database and returns it
+
+-----
+
+Section Related Endpoints
+In SectionsController class
+
+End point:{base url}/api/sectionsevisions
+Get method
+Method Called: GetSections
+Model Returned:Section
+Returns an IQueryable of all sections stored in the server
+
+End point:{base url}/api/sections/{Specific Id}
+Get method
+Method Called: GetSection
+Model Returned: Section
+Returns section with specific id
+
+End point:{base url}/api/sections/{Specific Id}
+Put method
+Method Called: PutSection
+Model Sent: Section
+Modifies the section at the specific id to be the section sent
+
+End point:{base url}/api/sections
+Post method
+Method Called: PostSection
+Model Sent: Section
+Model Returned: Section
+Adds sent section to the database
+
+End point:{base url}/api/sections/{Specific Id}
+Delete method
+Method Called: DeleteSection
+Model Returned: Section
+Deletes section of specific id from the database and returns it
+
+-----
+
+Subsection Related Endpoints
+In SubsectionsController class
+
+End point:{base url}/api/rubsections
+Get method
+Method Called: GetSubsections
+Model Returned:Subsection
+Returns an IQueryable of all subsections stored in the server
+
+End point:{base url}/api/subsections/{Specific Id}
+Get method
+Method Called: GetSubsection
+Model Returned: Subsection
+Returns subsection with specific id
+
+End point:{base url}/api/sections/{Specific Id}
+Put method
+Method Called: PutSubsection
+Model Sent: Subsection
+Modifies the subsection at the specific id to be the subsection sent
+
+End point:{base url}/api/subsections
+Post method
+Method Called: PostSubsection
+Model Sent: Subsection
+Model Returned: Subsection
+Adds sent Subsection to the database
+
+End point:{base url}/api/subsections/{Specific Id}
+Delete method
+Method Called: DeleteSubsection
+Model Returned: Subsection
+Deletes subsection of specific id from the database and returns it
+
+-----
+
+Template Related Endpoints
+In TemplatesController class
+
+End point:{base url}/api/template
+Get method
+Method Called: GetTemplates
+Model Returned:Template
+Returns an IQueryable of all templates stored in the server
+
+End point:{base url}/api/templates/{Specific Id}
+Get method
+Method Called: GetTemplate
+Model Returned: Template
+Returns template with specific id
+
+End point:{base url}/api/sections/{Specific Id}
+Put method
+Method Called: PutTemplate
+Model Sent: Template
+Modifies the template at the specific id to be the template sent
+
+End point:{base url}/api/templates
+Post method
+Method Called: PostTemplate
+Model Sent: Template
+Model Returned: Template
+Adds sent template to the database
+
+End point:{base url}/api/templates/{Specific Id}
+Delete method
+Method Called: DeleteTemplate
+Model Returned: Template
+Deletes template of specific id from the database and returns it

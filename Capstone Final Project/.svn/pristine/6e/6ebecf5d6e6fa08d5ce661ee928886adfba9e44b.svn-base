@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+
+namespace RESTv0.Models
+{
+    public interface IRegistrationRepo
+    {
+        IEnumerable<Course> GetCourses();
+        Course GetCourse(int courseId);
+        Course AddCourse(Course course);
+        bool DeleteCourse(int courseId);
+    }
+}
